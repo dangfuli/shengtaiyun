@@ -1,0 +1,22 @@
+{
+  "css_anjianguanli": "#element-one-ajxt>a>span.menu-content.block>span.text.m-left-sm",
+  "css_anjianbanli": "#element-two-ajbl > a > span",
+  "css_faqianjian": "[type=submit]",
+  "css_dangshiren": "#chooseLawObjectBtn>button",
+  "id_mingcheng": "objectName",
+  "id_dizhi": "addressModel",
+  "id_leixing": "lawObjectTypeModel",
+  "id_search": "lawObjectSearchBtn",
+  "css_gerendata": ".bs-checkbox>input",
+  "id_okbutton": "lawObjectBtn",
+  "id_idnum": "personCardNumber",
+  "id_address": "personAddress",
+  "id_phone": "personLegalPhone",
+  "css_anyouButton": "[data-target='#anyou']",
+  "css_choose_anyou": "[for='checkboxProtection24']",
+  "css_anyou_ok_button": "#anyou>div>div>div.modal-header>div>button.btn.btn-info",
+  "id_anjian_date": "illegalDate",
+  "css_today": "[colspan='7']",
+  "id_save": "submitSaveSase",
+
+}
