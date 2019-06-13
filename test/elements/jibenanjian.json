@@ -18,5 +18,7 @@
   "id_anjian_date": "illegalDate",
   "css_today": "[colspan='7']",
   "id_save": "submitSaveSase",
+  "class_no_continue": "cancel",
+  "class_faqianjian_ok_button": "confirm"
 
 }
