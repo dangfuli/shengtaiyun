@@ -1,6 +1,7 @@
 {
-  "uri":"http://218.66.59.97:8099/",
-  "cookie":{'domain': '218.66.59.97', 'expiry': 1560779225.695446, 'httpOnly': True, 'name': 'igz__user_login', 'path': '/', 'secure': False, 'value': '286Xw8Ncbm9ym4NyXdurlauS05rQmcOWXpSbzpvQVaCT1ZTY2aikqJ3Bv2KTzpmeamWYb5xVoGamlKPVkL9f18zJog..'},
-  "cookie2": {'domain': '218.66.59.97', 'httpOnly': True, 'name': 'SESSION', 'path': '/', 'secure': False, 'value': 'dd426b22-4764-4003-98cc-d244f5bc705d'},
+
+  "uri": "http://125.35.91.158:8099/",
+  "cookie":{'domain': '125.35.91.158', 'expiry': 1560879573.30274, 'httpOnly': True, 'name': 'igz__user_login', 'path': '/', 'secure': False, 'value': '286Xw8Ncbm9ym4NyXdurlauS05rQmcOWXpSbzpvQVaCT1ZTY2aikqJ3Bv2KTzpmeamWYb5xVoGamlKPVkL9f18zJog..'},
+  "cookie2": {'domain': '125.35.91.158', 'httpOnly': True, 'name': 'SESSION', 'path': '/', 'secure': False, 'value': '2d169729-bede-430e-baa4-db8dd0ba08e1'},
 
 }
