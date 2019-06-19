@@ -7,20 +7,19 @@ url = login_data['uri'] + 'auth/goLogin'
 
 def main():
     driver = webdriver.Chrome()
-    ## 添加cookie暂时有点问题
+    ## 登录
     cookieLogin(driver)
     ## 先临时手动登录
     #__login(driver)
     time.sleep(10)
-    ## 点击侧边案件管理
-    click_anjianguanli(driver)
-    ## 点击发起案件
-    click_faqianjian(driver)
-    ## 填写基本信息
-    to_base_info(driver)
+    ## 发起案件
+    base_case(driver)
     time.sleep(10)
     ############## 简易案件
-    to_jianyi_info(driver)
+    #to_jianyi_info(driver)
+    time.sleep(10)
+    ############## 一般案件
+
     driver.quit()
 def __login(driver):
     ## 登录
