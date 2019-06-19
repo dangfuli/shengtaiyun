@@ -2,7 +2,7 @@
 from selenium import webdriver
 import unittest,os
 from lib.flow import *
-login_data = getConfig.getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configs/login.json'))
+login_data = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configs/login.json'))
 url = login_data['uri'] + 'auth/goLogin'
 
 def main():
@@ -13,12 +13,15 @@ def main():
     #__login(driver)
     time.sleep(10)
     ## 发起案件
-    base_case(driver)
-    time.sleep(10)
+    # base_case(driver)
+    # time.sleep(10)
     ############## 简易案件
     #to_jianyi_info(driver)
-    time.sleep(10)
+    # time.sleep(10)
     ############## 一般案件
+    base_case(driver)
+    time.sleep(10)
+    to_yiban_info(driver)
 
     driver.quit()
 def __login(driver):
@@ -39,8 +42,6 @@ def cookieLogin(driver):
     time.sleep(2)
     driver.get(login_data['uri']+'/auth/goHome')
 
-# jianyianjian()
-# yibanxingzheng()
 def _temp_debug():
     driver = webdriver.Chrome()
     ## 添加cookie暂时有点问题
@@ -51,9 +52,9 @@ def _temp_debug():
     click_anjianguanli(driver)
     driver.find_element_by_css_selector('#caseDataTable > tbody > tr:nth-child(1) > td:nth-child(4) > a > i').click()
     time.sleep(3)
-    to_jianyi_info(driver)
+    to_yiban_info(driver)
+
 
 #_temp_debug()
-
 main()
 

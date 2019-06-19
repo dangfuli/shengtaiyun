@@ -11,7 +11,6 @@ def to_jianyi_info(driver):
     '''简易案件'''
     # 滑到顶部
     driver.execute_script("window.scrollTo(0,0)")
-
     elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'elements/jianyianjian.json'))
     try:
         ## 点击简易案件标题

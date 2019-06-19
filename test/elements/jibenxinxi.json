@@ -15,6 +15,7 @@
   "css_anyouButton": "[data-target='#anyou']",
   "css_choose_anyou": "[for='checkboxProtection24']",
   "css_anyou_ok_button": "#anyou>div>div>div.modal-header>div>button.btn.btn-info",
+  "id_case_name": "caseName",
   "id_anjian_date": "illegalDate",
   "css_today": "[colspan='7']",
   "id_save": "submitSaveSase",

@@ -51,6 +51,9 @@ def base_case(driver):
         time.sleep(1)
         driver.find_element_by_css_selector(elements['css_anyou_ok_button']).click()
         time.sleep(1)
+        ## 案件名称随便加个东西
+        driver.find_element_by_id(elements['id_case_name']).send_keys(random.randrange(0,100000))
+        time.sleep(1)
         # 选择案件发生日期
         # 添加时间
         js_value = 'document.getElementById("illegalDate").value="{0}"'.format(time.strftime('%Y-%m-%d',time.localtime()))
