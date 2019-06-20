@@ -14,7 +14,7 @@ d.find_element_by_id('password').send_keys('chn12369')
 time.sleep(10)
 d.find_element_by_id('loginbutton').click()
 time.sleep(2)
-d.add_cookie( {'domain': '125.35.91.158', 'httpOnly': True, 'name': 'SESSION', 'path': '/', 'secure': False, 'value': '2d169729-bede-430e-baa4-db8dd0ba08e1'})
+# d.add_cookie( {'domain': '125.35.91.158', 'httpOnly': True, 'name': 'SESSION', 'path': '/', 'secure': False, 'value': '2d169729-bede-430e-baa4-db8dd0ba08e1'})
 print(d.get_cookies())
 d.get('http://125.35.91.158:8099/auth/goHome')
 

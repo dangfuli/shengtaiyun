@@ -1,4 +1,6 @@
-from lib.flow import *
+from lib.utils.getConfig import *
+from selenium.webdriver.support.select import Select
+import time,random
 elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)),'elements/jibenxinxi.json'))
 def base_case(driver):
     '''案件基本信息填写'''
@@ -47,6 +49,7 @@ def base_case(driver):
         time.sleep(1)
         ## 随机取一个案由
         elements['css_choose_anyou'] = elements['css_choose_anyou'].replace('24',str(random.choice([i for i in range(25) if i!=0])))
+        print(elements['css_choose_anyou'])
         driver.find_element_by_css_selector(elements['css_choose_anyou']).click()
         time.sleep(1)
         driver.find_element_by_css_selector(elements['css_anyou_ok_button']).click()
@@ -74,3 +77,61 @@ def base_case(driver):
         driver.find_element_by_class_name(elements['class_faqianjian_ok_button']).click()
     except:
         print('进入下一步出错')
+
+def generate_anjuan(driver):
+    elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'elements/jianyianjian.json'))
+    try:
+        ##生成案卷
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_shengcheng_button']).click()   #点击一键生成案卷
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_choose_shengcheng_button']).click()  #点击是的，我要生成！
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_success_button']).click()  #点击成功后的确认
+        time.sleep(2)
+    except:
+        print('点击生成案卷按钮错误')
+    try:
+        driver.find_element_by_css_selector(elements['css_fujian']).click()  #添加附件
+        time.sleep(1)
+        Select(driver.find_element_by_id(elements['id_choose_leixing'])).select_by_index(0)  #选择类型
+        driver.find_element_by_id(elements['id_put_pic']).send_keys(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configs/jianyianjian.png'))                                                   ## 上传图片
+        time.sleep(2)
+        driver.find_element_by_css_selector(elements['css_put_button']).click()  #上传图片之后点击上传按钮
+        time.sleep(5)
+        driver.find_element_by_css_selector(elements['css_put_succ_button']).click()  #点击上传成功按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_put_ok_button']).click()   #点击确定按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_put_save_ok_button']).click()  #确定之后保存成功按钮
+        time.sleep(1)
+    except:
+        print('上传图片失败')
+    try:
+        driver.find_element_by_css_selector(elements['css_shengcheng_anjuan_button']).click()  #点击案卷生成
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_save_continue']).click()  #点击继续保存
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_ok_button']).click()  #点击确定按钮
+        time.sleep(2)
+        driver.find_element_by_css_selector(elements['css_shengchegn_anjuan_button']).click()  #点击生成案卷按钮
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_shengcheng_suc_okbutton']).click()   #点击生成成功之后的ok按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_back_button']).click()  # 点击返回，返回到上一级
+        time.sleep(2)
+
+    except:
+        print('保存案卷失败')
+def jiean(driver):
+    elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'elements/jianyianjian.json'))
+    try:
+        ## 办结
+        time.sleep(2)
+        driver.find_element_by_css_selector(elements['css_banjie_button']).click()  #点击办结按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_banjie_confirm_button']).click()  #提交确认办结
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_banjie_end_button']).click()  #点击确认
+    except:
+        print('办结出错')

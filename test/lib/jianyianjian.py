@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-
+from lib.creat_case import *
 def to_jianyi_info(driver):
     '''简易案件'''
     # 滑到顶部
@@ -59,7 +59,7 @@ def to_jianyi_info(driver):
         driver.find_element_by_css_selector(elements['css_choose_chufaleixing']).click() #点选择处罚种类
         time.sleep(1)
         elements['css_chufaleixing_value'] = elements['css_chufaleixing_value'].replace('1', str(
-            random.choice([i for i in range(7) if i != 0])))
+            random.choice(['3','4','5','6'])))
         driver.find_element_by_css_selector(elements['css_chufaleixing_value']).click()  #选择处罚种类
         time.sleep(1)
         driver.find_element_by_css_selector(elements['css_chufa_okbutton']).click()  #点击处罚种类确定按钮
@@ -133,49 +133,10 @@ def to_jianyi_info(driver):
         time.sleep(2)
     except:
         print('保存失败')
-    try:
-        ##生成案卷
-        time.sleep(1)
-        driver.find_element_by_css_selector(elements['css_shengcheng_button']).click()   #点击一键生成案卷
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_choose_shengcheng_button']).click()  #点击是的，我要生成！
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_success_button']).click()  #点击成功后的确认
-        time.sleep(2)
-    except:
-        print('点击生成案卷按钮错误')
-    try:
-        driver.find_element_by_css_selector(elements['css_fujian']).click()  #添加附件
-        time.sleep(1)
-        Select(driver.find_element_by_id(elements['id_choose_leixing'])).select_by_visible_text("勘察笔录")  #选择类型
-        driver.find_element_by_id(elements['id_put_pic']).send_keys(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configs/jianyianjian.png'))                                                   ## 上传图片
-        time.sleep(2)
-        driver.find_element_by_css_selector(elements['css_put_button']).click()  #上传图片之后点击上传按钮
-        time.sleep(5)
-        driver.find_element_by_css_selector(elements['css_put_succ_button']).click()  #点击上传成功按钮
-        time.sleep(1)
-        driver.find_element_by_css_selector(elements['css_put_ok_button']).click()   #点击确定按钮
-        time.sleep(1)
-        driver.find_element_by_css_selector(elements['css_put_save_ok_button']).click()  #确定之后保存成功按钮
-        time.sleep(1)
-    except:
-        print('上传图片失败')
-    try:
-        driver.find_element_by_css_selector(elements['css_shengcheng_anjuan_button']).click()  #点击案卷生成
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_save_continue']).click()  #点击继续保存
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_ok_button']).click()  #点击确定按钮
-        time.sleep(2)
-        driver.find_element_by_css_selector(elements['css_shengchegn_anjuan_button']).click()  #点击生成案卷按钮
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_shengcheng_suc_okbutton']).click()   #点击生成成功之后的ok按钮
-    except:
-        print('保存案卷失败')
+    ## 生成案卷
+    generate_anjuan(driver)
     try:
         ## 提交基本案件信息
-        driver.find_element_by_css_selector(elements['css_back_button']).click()   #点击返回，返回到上一级
-        time.sleep(2)
         driver.find_element_by_css_selector(elements['css_tijiao_button']).click()  #点击提交按钮
         time.sleep(1)
         driver.find_element_by_class_name(elements['class_reconfirm_button']).click()  # 点击确认，不在修改
@@ -224,13 +185,5 @@ def to_jianyi_info(driver):
         driver.find_element_by_class_name(elements['class_chenggong_confirm']).click()   #点击成功提交按钮
     except:
         print('生成结案案卷错误')
-    try:
-        ## 办结
-        time.sleep(2)
-        driver.find_element_by_css_selector(elements['css_banjie_button']).click()  #点击办结按钮
-        time.sleep(1)
-        driver.find_element_by_css_selector(elements['css_banjie_confirm_button']).click()  #提交确认办结
-        time.sleep(1)
-        driver.find_element_by_class_name(elements['class_banjie_end_button']).click()  #点击确认
-    except:
-        print('办结出错')
+    ## 结案
+    jiean(driver)

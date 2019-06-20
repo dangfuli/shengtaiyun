@@ -1,12 +1,11 @@
 # coding=utf-8
-from lib.utils.getConfig import *
-import time,os,random
-from selenium.webdriver.support.select import Select
+from lib.creat_case import *
 elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)),'elements/yibananjian.json'))
 
 def to_yiban_info(driver):
     ## 一般案件
     try:
+        driver.execute_script("window.scrollTo(0,0)")   #滑到顶部
         driver.find_element_by_css_selector(elements['css_yiban_title']).click()  # 点击一般案件标题
         time.sleep(5)
     except:
@@ -114,7 +113,7 @@ def to_yiban_info(driver):
         print('选择是否听证，是否建设性项目错误')
     try:
         ##添加执法人员
-        driver.find_element_by_css_selector(elements['css_zhifa_man']).click()      #点击编辑执法人员按钮
+        driver.find_element_by_css_selector(elements['css_zhifa_man_button']).click()      #点击编辑执法人员按钮
         time.sleep(1)
         driver.find_element_by_css_selector(elements['css_zhifa_man_value1']).click()   #点击第一个执法人员
         driver.find_element_by_css_selector(elements['css_zhifa_man_value2']).click()   #点击第二个执法人员
@@ -136,3 +135,80 @@ def to_yiban_info(driver):
         time.sleep(5)
     except:
         print('保存一般案件处罚规定失败')
+    try:
+        ## 点击进入生成案卷
+        driver.find_element_by_css_selector(elements['css_get_anjuan_button']).click()  #点击一键生成案卷按钮
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_yes_do_button']).click()      #是的，继续
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_yes_do_button']).click()      #确定按钮
+        time.sleep(1)
+    except:
+        print('点击进入生成案卷错误')
+
+    ## 一键生成案卷
+    generate_anjuan(driver)
+    try:
+        #提交一般案件信息
+        driver.find_element_by_css_selector(elements['css_yiban_tj_button']).click()    #点击提交
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_yiban_tijiao_button']).click()  #点击是的，我要提交
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_yiban_tijiao_button']).click()    #提交完成后点击确定
+        time.sleep(5)
+    except:
+        print('点击提交一般案件按钮错误')
+    try:
+        ##结案，执行情况
+        driver.find_element_by_css_selector(elements['css_tree_jiean_button']).click()     #点击树图中结案按钮
+        time.sleep(2)
+        driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_start_jiean_date']))     #输入执行情况的执行时间
+        time.sleep(1)
+        driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_end_jiean_date']))       #输入执行情况结束时间
+        time.sleep(1)
+    except:
+        print('输入执行情况错误')
+    try:
+        ##结案信息
+        Select(driver.find_element_by_id(elements['id_fuyi'])).select_by_visible_text('否')      ##选择复议情况为否
+        time.sleep(1)
+        Select(driver.find_element_by_id(elements['id_susong'])).select_by_visible_text('否')    ##选择诉讼情况为否
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_ysqk_button']).click()    #点击移送情况按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_ysqk_value']).click()     #选择移送按钮
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_ysqk_okbutton']).click()  #点击确定按钮
+        time.sleep(1)
+        Select(driver.find_element_by_css_selector(elements['css_isbank'])).select_by_visible_text('否') #选择是否纳入银行征信系统为否
+        time.sleep(1)
+        driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_close_date']))   #填写结案日期
+        time.sleep(1)
+        driver.find_element_by_id(elements['id_anjuan_num']).send_keys(random.randrange(10000,1000000000))
+        time.sleep(1)
+        Select(driver.find_element_by_id(elements['id_isopen'])).select_by_visible_text('否')    #选择是否公开为否
+        time.sleep(1)
+        driver.find_element_by_id(elements['id_remark']).send_keys('test')      #输入备注
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_yiban_save_button']).click()      #点击保存按钮
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_save_okbutton']).click()      #点击保存之后点击确定
+        time.sleep(1)
+    except:
+        print('填写结案信息不正确')
+    try:
+        ##点击一键生成案卷
+        driver.find_element_by_css_selector(elements['css_shengcheng_case']).click()    #点击一键生成案卷
+        time.sleep(5)
+        generate_anjuan(driver)     ##生成案卷
+        driver.find_element_by_css_selector(elements['css_back_case']).click()      #点击返回按钮
+        time.sleep(5)
+        driver.find_element_by_css_selector(elements['css_tijiao_button']).click()  #点击提交按钮
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_tijiao_button']).click()  #点击继续提交
+        time.sleep(1)
+        driver.find_element_by_class_name(elements['class_tijiao_button']).click()  #点击确定
+        time.sleep(1)
+    except:
+        print('一键生成案卷出错')
+    jiean(driver)
