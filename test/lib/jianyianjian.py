@@ -133,7 +133,18 @@ def to_jianyi_info(driver):
         time.sleep(2)
     except:
         print('保存失败')
-    ## 生成案卷
+    try:
+        ##生成案卷
+        time.sleep(1)
+        driver.find_element_by_css_selector(elements['css_shengcheng_button']).click()  # 点击一键生成案卷
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_choose_shengcheng_button']).click()  # 点击是的，我要生成！
+        time.sleep(2)
+        driver.find_element_by_class_name(elements['class_success_button']).click()  # 点击成功后的确认
+        time.sleep(2)
+    except:
+        print('点击生成案卷按钮错误')
+
     generate_anjuan(driver)
     try:
         ## 提交基本案件信息

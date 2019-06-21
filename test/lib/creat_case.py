@@ -1,6 +1,6 @@
 from lib.utils.getConfig import *
 from selenium.webdriver.support.select import Select
-import time,random
+import time,random,os
 elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)),'elements/jibenxinxi.json'))
 def base_case(driver):
     '''案件基本信息填写'''
@@ -49,7 +49,6 @@ def base_case(driver):
         time.sleep(1)
         ## 随机取一个案由
         elements['css_choose_anyou'] = elements['css_choose_anyou'].replace('24',str(random.choice([i for i in range(25) if i!=0])))
-        print(elements['css_choose_anyou'])
         driver.find_element_by_css_selector(elements['css_choose_anyou']).click()
         time.sleep(1)
         driver.find_element_by_css_selector(elements['css_anyou_ok_button']).click()
@@ -81,21 +80,17 @@ def base_case(driver):
 def generate_anjuan(driver):
     elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'elements/jianyianjian.json'))
     try:
-        ##生成案卷
+        ## 点击添加文书
         time.sleep(1)
-        driver.find_element_by_css_selector(elements['css_shengcheng_button']).click()   #点击一键生成案卷
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_choose_shengcheng_button']).click()  #点击是的，我要生成！
-        time.sleep(2)
-        driver.find_element_by_class_name(elements['class_success_button']).click()  #点击成功后的确认
-        time.sleep(2)
-    except:
-        print('点击生成案卷按钮错误')
-    try:
         driver.find_element_by_css_selector(elements['css_fujian']).click()  #添加附件
-        time.sleep(1)
-        Select(driver.find_element_by_id(elements['id_choose_leixing'])).select_by_index(0)  #选择类型
-        driver.find_element_by_id(elements['id_put_pic']).send_keys(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configs/jianyianjian.png'))                                                   ## 上传图片
+        time.sleep(2)
+        driver.find_element_by_id(elements['id_put_pic']).send_keys(
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), 'configs/jianyianjian.png'))  ## 上传图片
+        time.sleep(2)
+
+        driver.find_element_by_css_selector(elements['css_choose_leixing']).click()
+        driver.find_element_by_css_selector("[codealias='勘察笔录']").click()
+        # Select(driver.find_element_by_css_selector(elements['css_choose_leixing'])).select_by_visible_text("勘查")  #选择类型
         time.sleep(2)
         driver.find_element_by_css_selector(elements['css_put_button']).click()  #上传图片之后点击上传按钮
         time.sleep(5)
@@ -127,6 +122,7 @@ def jiean(driver):
     elements = getElement(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'elements/jianyianjian.json'))
     try:
         ## 办结
+        driver.execute_script("var q=document.documentElement.scrollTop=0")
         time.sleep(2)
         driver.find_element_by_css_selector(elements['css_banjie_button']).click()  #点击办结按钮
         time.sleep(1)

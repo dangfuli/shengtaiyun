@@ -31,6 +31,7 @@
   "css_zhifa_man_button": "#environmentElementCss > div.col-lg-12.padding-xs > div > div > div > button",
   "css_zhifa_man_value1": "#checkUserChooseTable > tbody > tr:nth-child(1) > td.bs-checkbox > input[type=checkbox]",
   "css_zhifa_man_value2":"#checkUserChooseTable > tbody > tr:nth-child(2) > td.bs-checkbox > input[type=checkbox]",
+  "id_zhifa_okbutton": "chickUserBtn",
   "id_zhifa_man_date1": "bindingDateClass0",
   "id_zhifa_man_date2": "bindingDateClass1",
   "css_save_button": "#main_content > div.main-container > div > div > div > div.modal-footer > button:nth-child(2)",
@@ -56,9 +57,11 @@
   "css_yiban_save_button": "#main_content > div.main-container > div > div > div > div.modal-footer > button:nth-child(2)",
   "class_save_okbutton": "confirm",
   "css_shengcheng_case": "#main_content > div.main-container > div > div > div > div.modal-footer > a",
+  "css_scaj_button": "#main_content > div.main-container > div > div:nth-child(1) > div > div > div > div:nth-child(2) > div:nth-child(3) > button",
+  "class_okbutton": "confirm",
+  "css_confirm_sc_button": "#generatePDFModeler > div > div > div.modal-header > div > button.btn.btn-info",
+
   "css_back_case": "#main_content > div.main-container > div > div:nth-child(1) > div > div > div > div:nth-child(2) > div:nth-child(1) > button",
   "css_tijiao_button": "#main_content > div.main-container > div > div > div > div.modal-footer > button:nth-child(3)",
   "class_tijiao_button": "confirm",
-
-
 }

@@ -36,7 +36,9 @@
   "class_choose_shengcheng_button": "confirm",
   "class_success_button": "confirm",
   "css_fujian": "#main_content > div.main-container > div > div:nth-child(2) > div > div > div.smart-widget-inner.table-responsive > div > div:nth-child(4) > div > button:nth-child(1)",
-  "id_choose_leixing": "tjwstm-typeCode",
+
+  "css_choose_leixing": "#tjwstm-typeCode",
+
   "id_put_pic": "file-dType",
   "css_put_button": "#tjwstm-itemForm > div > div:nth-child(7) > div > div > div.input-group.file-caption-main > div.input-group-btn > a > span",
   "css_put_succ_button": "body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > button.confirm",

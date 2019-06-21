@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ed44d8-2852-4ae3-b478-590ff568c9b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/111.py" beforeDir="false" afterPath="$PROJECT_DIR$/111.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_system_anjian.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_system_anjian.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/login.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements/jianyianjian.json" beforeDir="false" afterPath="$PROJECT_DIR$/elements/jianyianjian.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elements/yibananjian.json" beforeDir="false" afterPath="$PROJECT_DIR$/elements/yibananjian.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/creat_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/creat_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/jianyianjian.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jianyianjian.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/yibananjian.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/yibananjian.py" afterDir="false" />
     </list>
@@ -18,10 +20,10 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/test$feed.coverage" NAME="feed Coverage Results" MODIFIED="1560841285013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/test$creat_case.coverage" NAME="creat_case Coverage Results" MODIFIED="1561018583520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
+    <SUITE FILE_PATH="coverage/test$creat_case.coverage" NAME="creat_case Coverage Results" MODIFIED="1561083850387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/test$skip_login.coverage" NAME="skip_login Coverage Results" MODIFIED="1560734708991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/test$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1561019301376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/test$111.coverage" NAME="111 Coverage Results" MODIFIED="1560997754370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1561087175996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/test$111.coverage" NAME="111 Coverage Results" MODIFIED="1561078914462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/test_system_anjian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="158">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
                 <element signature="e#15#45#0" expanded="true" />
               </folding>
@@ -55,10 +57,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/login.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/111.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#16#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/yibananjian.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="162" column="35" lean-forward="true" selection-start-line="162" selection-end-line="163" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elements/jianyianjian.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/creat_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1755">
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elements/yibananjian.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="285">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -83,16 +127,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>选择关联专项出错</find>
-      <find>选择违法案件类型错误</find>
       <find>选择处罚依据出错</find>
       <find>css_choose_anyou</find>
       <find>案由</find>
-      <find>print</find>
       <find>class_choose_shengcheng_button</find>
-      <find>css_shengcheng_button</find>
-      <find>点击生成案卷按钮错误</find>
-      <find>tjwstm-typeCode</find>
       <find>css_weifaleixing_value</find>
       <find>checkboxPunish</find>
       <find>css_chufaleixing_value</find>
@@ -104,7 +142,21 @@
       <find>css_yiban_title</find>
       <find>处罚种类</find>
       <find>css_zhifa_man</find>
+      <find>选择违法类型出错</find>
+      <find>css_weifaleixing_okbutton</find>
+      <find>chickUserBtn</find>
+      <find>添加执法人员错误</find>
+      <find>css_zhifa_man_value2</find>
+      <find>点击生成案卷按钮错误</find>
+      <find>css_tree_jiean_button</find>
+      <find>css_shengcheng_button</find>
       <find>css_fujian</find>
+      <find>111111</find>
+      <find>print</find>
+      <find>id_choose_leixing</find>
+      <find>tjwstm-typeCode</find>
+      <find>点击处罚决定错误</find>
+      <find>generate_anjuan</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,17 +182,17 @@
         <option value="$PROJECT_DIR$/lib/anjian.py" />
         <option value="$PROJECT_DIR$/lib/skip_login.py" />
         <option value="$PROJECT_DIR$/case/test_main.py" />
-        <option value="$PROJECT_DIR$/elements/jianyianjian.json" />
         <option value="$PROJECT_DIR$/lib/yiban.py" />
-        <option value="$PROJECT_DIR$/case/test_system_anjian.py" />
         <option value="$PROJECT_DIR$/elements/jibenxinxi.json" />
-        <option value="$PROJECT_DIR$/configs/login.json" />
+        <option value="$PROJECT_DIR$/lib/flow.py" />
         <option value="$PROJECT_DIR$/111.py" />
+        <option value="$PROJECT_DIR$/configs/login.json" />
+        <option value="$PROJECT_DIR$/elements/jianyianjian.json" />
         <option value="$PROJECT_DIR$/lib/jianyianjian.py" />
         <option value="$PROJECT_DIR$/elements/yibananjian.json" />
         <option value="$PROJECT_DIR$/lib/yibananjian.py" />
-        <option value="$PROJECT_DIR$/lib/flow.py" />
         <option value="$PROJECT_DIR$/lib/creat_case.py" />
+        <option value="$PROJECT_DIR$/case/test_system_anjian.py" />
       </list>
     </option>
   </component>
@@ -354,12 +406,12 @@
       <workItem from="1560326012248" duration="590000" />
       <workItem from="1560326918066" duration="12099000" />
       <workItem from="1560407758100" duration="9651000" />
-      <workItem from="1560733319486" duration="48183000" />
+      <workItem from="1560733319486" duration="64224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90449000" />
+    <option name="totallyTimeSpent" value="106490000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,15 +430,15 @@
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49673203" weight="0.16074313" />
       <window_info id="Structure" order="2" sideWeight="0.503268" side_tool="true" weight="0.17447495" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5016155" side_tool="true" weight="0.3825397" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3275862" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5016155" side_tool="true" weight="0.2711599" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32857144" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32857144" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32857144" />
       <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4983845" visible="true" weight="0.2711599" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4983845" weight="0.3825397" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4983845" weight="0.29310346" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32857144" />
@@ -398,18 +450,18 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" sideWeight="0.50127876" side_tool="true" weight="0.1720517" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49673203" visible="true" weight="0.16074313" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49673203" visible="true" weight="0.16074313" />
       <window_info id="Structure" order="2" sideWeight="0.503268" side_tool="true" weight="0.17447495" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5016155" side_tool="true" weight="0.3825397" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3275862" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5016155" side_tool="true" weight="0.2711599" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32857144" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32857144" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32857144" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4983845" visible="true" weight="0.2711599" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4983845" weight="0.3825397" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4983845" visible="true" weight="0.2711599" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4983845" weight="0.29310346" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32857144" />
@@ -484,41 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/login.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elements/jibenxinxi.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="15" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elements/jianyianjian.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="37" column="183" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/111.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#16#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elements/yibananjian.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -546,20 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jianyianjian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2447">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/yibananjian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3030">
-          <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/utils/getConfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -567,17 +574,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/elements/jianyianjian.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/login.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#16#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jianyianjian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="141" column="21" lean-forward="true" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
+          <folding>
+            <element signature="e#15#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elements/yibananjian.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/yibananjian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="162" column="35" lean-forward="true" selection-start-line="162" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/creat_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1755">
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="90">
+          <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/case/test_system_anjian.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="158">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="e#15#45#0" expanded="true" />
           </folding>

@@ -9,14 +9,12 @@ def main():
     driver = webdriver.Chrome()
     ## 登录
     cookieLogin(driver)
-    ## 先临时手动登录
-    #__login(driver)
-    time.sleep(10)
-    ## 发起案件
+    # time.sleep(10)
+    # ## 发起案件
     # base_case(driver)
     # time.sleep(10)
-    ############## 简易案件
-    #to_jianyi_info(driver)
+    # ############## 简易案件
+    # to_jianyi_info(driver)
     # time.sleep(10)
     ############## 一般案件
     base_case(driver)
@@ -45,16 +43,16 @@ def cookieLogin(driver):
 def _temp_debug():
     driver = webdriver.Chrome()
     ## 添加cookie暂时有点问题
-    ##driver = Driver()
-    ## 先临时手动登录
     cookieLogin(driver)
     time.sleep(10)
-    click_anjianguanli(driver)
+    driver.find_element_by_css_selector(elements['css_anjianguanli']).click()  ##点击侧边栏案件
+    time.sleep(2)
+    driver.find_element_by_css_selector(elements['css_anjianbanli']).click()  ##点击进入案件管理
+    time.sleep(1)
     driver.find_element_by_css_selector('#caseDataTable > tbody > tr:nth-child(1) > td:nth-child(4) > a > i').click()
     time.sleep(3)
     to_yiban_info(driver)
 
-
-#_temp_debug()
+# _temp_debug()
 main()
 

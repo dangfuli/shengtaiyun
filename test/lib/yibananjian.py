@@ -118,7 +118,7 @@ def to_yiban_info(driver):
         driver.find_element_by_css_selector(elements['css_zhifa_man_value1']).click()   #点击第一个执法人员
         driver.find_element_by_css_selector(elements['css_zhifa_man_value2']).click()   #点击第二个执法人员
         time.sleep(1)
-        driver.find_element_by_id(elements['chickUserBtn']).click()     #点击确定
+        driver.find_element_by_id(elements['id_zhifa_okbutton']).click()     #点击确定
         time.sleep(1)
         driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_zhifa_man_date1']))  #第一个执法人员的日期
         driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_zhifa_man_date2']))  # 第二个执法人员的日期
@@ -148,6 +148,7 @@ def to_yiban_info(driver):
 
     ## 一键生成案卷
     generate_anjuan(driver)
+
     try:
         #提交一般案件信息
         driver.find_element_by_css_selector(elements['css_yiban_tj_button']).click()    #点击提交
@@ -159,9 +160,10 @@ def to_yiban_info(driver):
     except:
         print('点击提交一般案件按钮错误')
     try:
+        driver.execute_script("var q=document.documentElement.scrollTop=400")
         ##结案，执行情况
         driver.find_element_by_css_selector(elements['css_tree_jiean_button']).click()     #点击树图中结案按钮
-        time.sleep(2)
+        time.sleep(5)
         driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_start_jiean_date']))     #输入执行情况的执行时间
         time.sleep(1)
         driver.execute_script('document.getElementById("{1}").value="{0}"'.format(time.strftime('%Y-%m-%d', time.localtime()),elements['id_end_jiean_date']))       #输入执行情况结束时间
@@ -200,7 +202,18 @@ def to_yiban_info(driver):
         ##点击一键生成案卷
         driver.find_element_by_css_selector(elements['css_shengcheng_case']).click()    #点击一键生成案卷
         time.sleep(5)
-        generate_anjuan(driver)     ##生成案卷
+
+        driver.find_element_by_css_selector("css_scaj_button").click()
+        time.sleep(1)
+        driver.find_element_by_class_name("class_okbutton").click()
+        time.sleep(5)
+        driver.find_element_by_class_name("class_okbutton").click()
+        time.sleep(2)
+        driver.find_element_by_css_selector("css_confirm_sc_button").click()
+        time.sleep(2)
+        driver.find_element_by_class_name('class_okbutton').click()
+        time.sleep(1)
+
         driver.find_element_by_css_selector(elements['css_back_case']).click()      #点击返回按钮
         time.sleep(5)
         driver.find_element_by_css_selector(elements['css_tijiao_button']).click()  #点击提交按钮
